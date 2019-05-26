@@ -1,0 +1,20 @@
+body{
+    color: #000;
+    font-family: フォント名;
+  }
+  //SP
+  @media screen and (max-width: #{nth($breakPointList, 1)}){
+    body{
+      min-width: 320px;
+    }
+    html, body{
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+  //PC
+  @media print,screen and (min-width: #{nth($breakPointList, 2)}){
+    body{
+      width: 100%;
+    }
+  }

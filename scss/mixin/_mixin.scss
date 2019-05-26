@@ -1,0 +1,84 @@
+//mixin
+@mixin text-data($color : #3E3E3E,$size:16px,$space:0.025rem){
+    color: $color;
+    font-size:$size;
+    letter-spacing: $space;
+}
+
+@mixin send-btn(){
+    font-size:$sub-heading-18;
+    background-color: $btn-color;
+    display: inline-block;
+    border-radius: 1rem;
+    padding: 1.2rem 0;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
+}
+
+@mixin flex($justify:left,$align:left){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin link-btn($color){
+  display: inline-block;
+  padding: 1.6rem 8.3rem;
+  font-weight: bold;
+  text-transform: uppercase ;  
+  border:solid 1px $color;   
+}
+
+@mixin accordion_sing {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 0;
+  border: solid 1.5px $active-color;
+  top: 45%;
+  right: 0;
+  border-radius: 1em;
+}
+
+@mixin arrow($width,$rotate){
+  content: '';
+  display: block;
+  position: absolute;
+  width: $width;
+  border :1px solid $base-color-b;
+  z-index: 2000;
+  position: absolute;
+  transform: rotate($rotate);
+}
+
+@mixin required(){
+  position: absolute;
+  content:'必須';
+  display: inline-block;
+  background-color: $important-color;
+  @include text-data($base-color-w, $base-size-16, 0);
+  padding: 0 1.1rem 0 1.2rem;
+  border-radius: .5rem;
+  margin-top: .35rem;
+}
+
+@mixin hamburger-icon_part1(){
+  background:  $base-color-b;
+  border-radius: 4px;
+  display: block;
+  transition: all 0.3s ease-in-out;
+   width: 26px;
+    height: 3.5px;
+}
+@mixin hamburger-icon_part2(){
+
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  
+}
+
